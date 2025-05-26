@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="fixed top-0 navbar bg-white shadow-sm  ">
+    <div className="fixed top-0 navbar bg-white shadow-sm z-50 ">
       <div className="navbar-start">
         <h1 className="text-blue-500 text-3xl lg:text-4xl font-bold">
           Strategify
