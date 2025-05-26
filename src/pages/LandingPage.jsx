@@ -1,9 +1,10 @@
 import Navbar from '../components/Navbar';
+import Homepage from '../components/HomePage';
 function LandingPage() {
   return (
-    <div className="bg-white h-screen">
+    <div className="bg-white h-screen relative">
       <Navbar />
-      <h1 className="text-black">Welcome to the LandingPage</h1>
+      <Homepage />
     </div>
   );
 }
