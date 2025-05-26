@@ -14,7 +14,7 @@ function Homepage() {
             Transform your marketing strategy in minutes
           </h1>
           <p className="py-6 text-lg sm:text-xl">
-            Start for free! Fill out a simple form , get an instant preview of
+            Start for free! Fill out a simple form, get an instant preview of
             your customized marketing strategy, and upgrade only when you're
             ready for the full plan.
           </p>
