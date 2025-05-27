@@ -1,6 +1,6 @@
-import strategy from '../assets/strategy.jpg';
-import webinterface from '../assets/webinterface.jpg';
-import analytics from '../assets/analytics.jpg';
+import strategy from '../../assets/strategy.jpg';
+import webinterface from '../../assets/webinterface.jpg';
+import analytics from '../../assets/analytics.jpg';
 function InnovativePart() {
   return (
     <div className="hero bg-white text-neutral min-h-screen lg:p-5 ">

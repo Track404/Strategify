@@ -1,4 +1,4 @@
-import BackgroundHome from '../assets/BackgroundHome.jpg';
+import BackgroundHome from '../../assets/BackgroundHome.jpg';
 function Homepage() {
   return (
     <div
