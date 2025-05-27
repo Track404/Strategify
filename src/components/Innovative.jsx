@@ -22,10 +22,10 @@ function InnovativePart() {
               <img src={strategy} alt="Marketing Strategy" />
             </figure>
             <div className="card-body ">
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl ">
+              <h2 className="font-bold text-2xl md:text-3xl  ">
                 User-Friendly Interface for Seamless Experience
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Oour intuitive platform makes creating marketing strategies
                 simple and accessible for everyone, regardless of experience
                 level.
@@ -37,10 +37,10 @@ function InnovativePart() {
               <img src={webinterface} alt="Web Interface" />
             </figure>
             <div className="card-body ">
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="font-bold text-2xl md:text-3xl ">
                 Tailored Solutions for Every Buisiness Type
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Get customized marketing strategies that align with your
                 specific, buisness goals, and target audience.
               </p>
@@ -51,10 +51,10 @@ function InnovativePart() {
               <img src={analytics} alt="Data Analytics" />
             </figure>
             <div className="card-body ">
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="font-bold text-2xl md:text-3xl ">
                 Data-Driven Insights for Informed Decisions
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Leverage powerful analytics and market research to create
                 strategies backed by real data and proven methodologies.
               </p>

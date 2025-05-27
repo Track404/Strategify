@@ -15,13 +15,13 @@ function ProcessPart() {
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="card  shadow-md bg-white w-[75vw] lg:w-[30vw] h-60 lg:h-70">
             <div className="card-body ">
-              <h2 className="text-blue-500 font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="text-blue-500 font-bold text-2xl md:text-3xl ">
                 1
               </h2>
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl ">
+              <h2 className="font-bold text-2xl md:text-3xl  ">
                 Complete the Form
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Fill out our simple questionnaire about your buisness, goals,and
                 target audience.
               </p>
@@ -29,13 +29,13 @@ function ProcessPart() {
           </div>
           <div className="card  shadow-md bg-white w-[75vw] lg:w-[30vw] h-60 lg:h-70">
             <div className="card-body ">
-              <h2 className="text-blue-500 font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="text-blue-500 font-bold text-2xl md:text-3xl ">
                 2
               </h2>
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="font-bold text-2xl md:text-3xl ">
                 Get Your Preview
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Instantly receive a preview of your customized marketing
                 strategy with key insights.
               </p>
@@ -43,13 +43,13 @@ function ProcessPart() {
           </div>
           <div className="card  shadow-md bg-white w-[75vw] lg:w-[30vw] h-60 lg:h-70">
             <div className="card-body ">
-              <h2 className="text-blue-500 font-bold text-2x md:text-3xl xl:text-4xl">
+              <h2 className="text-blue-500 font-bold text-2x md:text-3xl ">
                 3
               </h2>
-              <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl">
+              <h2 className="font-bold text-2xl md:text-3xl ">
                 Upgrade for Full Access
               </h2>
-              <p className="md:text-lg xl:text-xl 2xl:text-2xl">
+              <p className="md:text-lg xl:text-xl ">
                 Like what you see? Upgrade to access the complete strategy and
                 all premium features.
               </p>
