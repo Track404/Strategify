@@ -6,12 +6,42 @@ function Navbar() {
           Strategify
         </h1>
       </div>
-      <div className="hidden md:flex navbar-center gap-10 text-neutral font-semibold text-lg lg:text-xl ">
-        <a className="link link-hover">Home</a>
-        <a className="link link-hover">Pricing</a>
-        <a className="link link-hover">About</a>
-      </div>
+
       <div className="navbar-end">
+        <ul className="menu menu-horizontal px-1 text-black">
+          <li>
+            <details>
+              <summary>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {' '}
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />{' '}
+                </svg>
+              </summary>
+              <ul className="bg-white rounded-t-none font-semibold text-lg  w-50 ">
+                <li>
+                  <a>About</a>
+                </li>
+                <li>
+                  <a>Pricing</a>
+                </li>
+                <li>
+                  <a>Start Now</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
         <button className="btn xl:btn-lg  btn-primary">Start Free</button>
       </div>
     </div>
