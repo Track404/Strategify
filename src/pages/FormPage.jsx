@@ -15,13 +15,8 @@ function FormPage() {
     <div className="bg-white h-screen relative hero">
       <div className="card card-border bg-gray-100 pb-5">
         <div className="card-body">
-          <input
-            type="checkbox"
-            value="light"
-            className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]"
-          />
           <ul className="steps text-black">
-            <li className="step step-primary">Register</li>
+            <li className="step step-primary">Business Information</li>
             <li className={activeForm >= 2 ? 'step step-primary' : 'step'}>
               Choose plan
             </li>
