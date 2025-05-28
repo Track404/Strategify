@@ -2,17 +2,23 @@ import Form1 from '../components/FormPage/form1';
 import Form2 from '../components/FormPage/form2';
 import Form3 from '../components/FormPage/form3';
 import Form4 from '../components/FormPage/form4';
+import backgroundForm from '../assets/backgroundForm.jpg';
 import { useState } from 'react';
 function FormPage() {
   const [formData, setFormData] = useState({
     businessName: '',
     sellInfo: '',
-    businessType: 'SaaS',
+    businessType: '',
     usp: '',
   });
   const [activeForm, setActiveForm] = useState(1);
   return (
-    <div className="bg-white h-screen relative hero">
+    <div
+      className="bg-white h-screen relative hero "
+      style={{
+        backgroundImage: `url(${backgroundForm})`,
+      }}
+    >
       <div className="card card-border bg-gray-100 pb-5">
         <div className="card-body">
           <ul className="steps text-black">

@@ -1,3 +1,5 @@
+import FormButton from './FormButton';
+
 function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   if (!isActive) return null;
   const handleSubmit = (e) => {
@@ -80,7 +82,7 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
                   setFormData({ ...formData, businessType: e.target.value })
                 }
               >
-                <option disabled value="">
+                <option disabled selected value="">
                   Choose:
                 </option>
                 <option defaultValue="SaaS">SaaS</option>
@@ -120,21 +122,7 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
           </div>
         </div>
 
-        <div className="flex justify-around">
-          <button
-            type="button"
-            className={
-              activeForm === 1 ? 'btn btn-disabled  ' : 'btn btn-primary '
-            }
-            onClick={() => setActiveForm(activeForm - 1)}
-            aria-disabled="true"
-          >
-            Previous
-          </button>
-          <button type="submit" className="btn btn-primary ">
-            next
-          </button>
-        </div>
+        <FormButton setActiveForm={setActiveForm} activeForm={activeForm} />
       </form>
     </>
   );
