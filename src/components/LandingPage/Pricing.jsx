@@ -56,7 +56,7 @@ function PricingPart() {
             </div>
           </div>
         </div>
-        // Pricing Cards
+
         <div className="flex flex-col md:flex-row gap-5 justify-center align-middle items-center  ">
           <div className="card w-70 md:w-[40vw] bg-white shadow-sm mb-4">
             <div className="card-body text-black">

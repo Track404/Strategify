@@ -1,6 +1,7 @@
 import strategy from '../../assets/strategy.jpg';
-import webinterface from '../../assets/webinterface.jpg';
+import custom from '../../assets/custom.jpg';
 import analytics from '../../assets/analytics.jpg';
+
 function InnovativePart() {
   return (
     <div className="hero bg-white text-neutral min-h-screen lg:p-5 ">
@@ -34,7 +35,7 @@ function InnovativePart() {
           </div>
           <div className="card  shadow-md bg-gray-100 p-1 w-[75vw] lg:w-[30vw] ">
             <figure>
-              <img src={webinterface} alt="Web Interface" />
+              <img src={custom} alt="Web Interface" />
             </figure>
             <div className="card-body ">
               <h2 className="font-bold text-2xl md:text-3xl ">
