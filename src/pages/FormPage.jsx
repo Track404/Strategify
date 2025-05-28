@@ -1,20 +1,48 @@
 import Form1 from '../components/FormPage/form1';
+import Form2 from '../components/FormPage/form2';
+import Form3 from '../components/FormPage/form3';
+import Form4 from '../components/FormPage/form4';
+import { useState } from 'react';
 function FormPage() {
+  const [formData, setFormData] = useState({
+    businessName: '',
+    sellInfo: '',
+    businessType: 'SaaS',
+    usp: '',
+  });
+  const [activeForm, setActiveForm] = useState(1);
   return (
     <div className="bg-white h-screen relative hero">
       <div className="card card-border bg-gray-100 pb-5">
         <div className="card-body">
+          <input
+            type="checkbox"
+            value="light"
+            className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]"
+          />
           <ul className="steps text-black">
             <li className="step step-primary">Register</li>
-            <li className="step step-primary">Choose plan</li>
-            <li className="step">Purchase</li>
-            <li className="step">Receive Product</li>
+            <li className={activeForm >= 2 ? 'step step-primary' : 'step'}>
+              Choose plan
+            </li>
+            <li className={activeForm >= 3 ? 'step step-primary' : 'step'}>
+              Purchase
+            </li>
+            <li className={activeForm >= 4 ? 'step step-primary' : 'step'}>
+              Receive Product
+            </li>
           </ul>
-          <Form1 />
-        </div>
-        <div className="card-actions justify-around">
-          <button className="btn btn-primary ">Previous</button>
-          <button className="btn btn-primary">Next</button>
+          <Form1
+            isActive={activeForm === 1}
+            formData={formData}
+            activeForm={activeForm}
+            setFormData={setFormData}
+            setActiveForm={setActiveForm}
+          />
+          {/* Uncomment the following lines to switch between forms */}
+          <Form2 isActive={activeForm === 2} />
+          <Form3 isActive={activeForm === 3} />
+          <Form4 isActive={activeForm === 4} />
         </div>
       </div>
     </div>

@@ -1,8 +1,14 @@
-function Form1() {
+function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
+  if (!isActive) return null;
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    setActiveForm(2); // Call the nextStep function
+  };
+  // This component renders the first form in a multi-step form process.
   return (
     <>
       <h1 className="text-black font-bold text-4xl">Business Info</h1>
-      <form className="flex gap-20">
+      <form className="flex gap-20" onSubmit={handleSubmit}>
         <div>
           <div className="flex flex-col mb-4">
             <label htmlFor="businessName" className="text-black mb-2">
@@ -19,6 +25,10 @@ function Form1() {
               minLength="2"
               maxLength="30"
               title="Only letters, numbers or dash"
+              onChange={(e) =>
+                setFormData({ ...formData, businessName: e.target.value })
+              }
+              value={formData.businessName}
             />
             <p className="validator-hint">
               Must be 2 to 30 characters , containing only letters, numbers or
@@ -41,6 +51,10 @@ function Form1() {
               minLength="10"
               maxLength="100"
               title="Only letters, numbers or dash"
+              value={formData.sellInfo}
+              onChange={(e) =>
+                setFormData({ ...formData, sellInfo: e.target.value })
+              }
             />
             <p className="validator-hint">
               Must be 10 to 200 characters
@@ -59,12 +73,16 @@ function Form1() {
               className="select validator"
               id="businessType"
               name="buinessType"
+              value={formData.businessType}
               required
+              onChange={(e) =>
+                setFormData({ ...formData, businessType: e.target.value })
+              }
             >
               <option disabled value="">
                 Choose:
               </option>
-              <option value="SaaS">SaaS</option>
+              <option defaultValue="SaaS">SaaS</option>
               <option value="E-Commerce">E-Commerce</option>
               <option value="Coaching">Coaching</option>
               <option value="Fintech">Fintech</option>
@@ -86,6 +104,10 @@ function Form1() {
               minLength="2"
               maxLength="50"
               title="Only letters, numbers or dash"
+              value={formData.usp}
+              onChange={(e) =>
+                setFormData({ ...formData, usp: e.target.value })
+              }
             />
 
             <p className="validator-hint">
@@ -94,6 +116,21 @@ function Form1() {
               containing only letters, numbers or dash
             </p>
           </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            className={
+              activeForm === 1 ? 'btn btn-disabled  ' : 'btn btn-primary'
+            }
+            onClick={() => setActiveForm(activeForm - 1)}
+            aria-disabled="true"
+          >
+            Previous
+          </button>
+          <button type="submit" className="btn btn-primary">
+            next
+          </button>
         </div>
       </form>
     </>
