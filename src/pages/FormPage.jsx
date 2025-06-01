@@ -11,7 +11,7 @@ function FormPage() {
     businessType: '',
     usp: '',
   });
-  const [activeForm, setActiveForm] = useState(1);
+  const [activeForm, setActiveForm] = useState(3);
   return (
     <div
       className="bg-white h-screen relative hero "
@@ -41,9 +41,27 @@ function FormPage() {
             setActiveForm={setActiveForm}
           />
           {/* Uncomment the following lines to switch between forms */}
-          <Form2 isActive={activeForm === 2} />
-          <Form3 isActive={activeForm === 3} />
-          <Form4 isActive={activeForm === 4} />
+          <Form2
+            isActive={activeForm === 2}
+            formData={formData}
+            activeForm={activeForm}
+            setFormData={setFormData}
+            setActiveForm={setActiveForm}
+          />
+          <Form3
+            isActive={activeForm === 3}
+            formData={formData}
+            activeForm={activeForm}
+            setFormData={setFormData}
+            setActiveForm={setActiveForm}
+          />
+          <Form4
+            isActive={activeForm === 4}
+            formData={formData}
+            activeForm={activeForm}
+            setFormData={setFormData}
+            setActiveForm={setActiveForm}
+          />
         </div>
       </div>
     </div>
