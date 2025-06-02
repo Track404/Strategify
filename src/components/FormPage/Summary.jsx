@@ -15,9 +15,7 @@ function Summary({ isActive, formData, setActiveForm, activeForm }) {
 
   return (
     <>
-      <h1 className="text-primary font-bold text-4xl mt-4 mb-8 text-center">
-        Summary
-      </h1>
+      <h1 className=" font-bold text-4xl mt-4 mb-8 text-center">📋 Summary</h1>
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -103,7 +101,7 @@ function Summary({ isActive, formData, setActiveForm, activeForm }) {
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 mt-8 px-6">
+      <div className="flex justify-around  mt-8 px-6">
         <button
           type="button"
           className={

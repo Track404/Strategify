@@ -1,6 +1,6 @@
 import FormButton from './FormButton';
 
-function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
+function Form2({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   if (!isActive) return null;
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
@@ -10,7 +10,7 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   return (
     <>
       <h1 className="text-black font-bold text-4xl mt-4 mb-4">
-        Target Audience
+        🧑‍💼 Target Audience
       </h1>
       <form className="flex flex-col " onSubmit={handleSubmit}>
         <div className="flex  gap-15">
@@ -41,7 +41,7 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
               <p className="validator-hint">Required</p>
             </div>
             <div className="flex flex-col mb-4">
-              <label htmlFor="usp" className="text-black mb-2">
+              <label htmlFor="paintPoints" className="text-black mb-2">
                 Customer pain points/challenges?
               </label>
               <textarea
@@ -139,4 +139,4 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   );
 }
 
-export default Form1;
+export default Form2;

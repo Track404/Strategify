@@ -5,6 +5,7 @@ import InnovativePart from '../components/LandingPage/Innovative';
 import PricingPart from '../components/LandingPage/Pricing';
 import CallToAction from '../components/LandingPage/CallToAction';
 import Footer from '../components/Footer';
+
 function LandingPage() {
   return (
     <div className="bg-white h-full relative">

@@ -9,9 +9,7 @@ function Form3({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   // This component renders the first form in a multi-step form process.
   return (
     <>
-      <h1 className="text-black font-bold text-4xl mt-4 mb-4">
-        Target Audience
-      </h1>
+      <h1 className="text-black font-bold text-4xl mt-4 mb-4">🎯 Goals</h1>
       <form className="flex flex-col " onSubmit={handleSubmit}>
         <div className="flex flex-col mb-4">
           <label htmlFor="goal" className="text-black mb-2">
@@ -26,13 +24,13 @@ function Form3({ isActive, formData, setFormData, setActiveForm, activeForm }) {
             placeholder="“Get 100 beta signups,” “Reach $5k MRR,” etc."
             pattern="^[A-Za-z0-9 .-]+$"
             minLength="2"
-            maxLength="30"
+            maxLength="100"
             value={formData.goal}
             onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
           />
 
           <p className="validator-hint">
-            Must be 2 to 30 characters , containing only letters, numbers or
+            Must be 2 to 100 characters , containing only letters, numbers or
             dash
           </p>
         </div>

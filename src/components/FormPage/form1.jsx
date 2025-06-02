@@ -9,9 +9,12 @@ function Form1({ isActive, formData, setFormData, setActiveForm, activeForm }) {
   // This component renders the first form in a multi-step form process.
   return (
     <>
-      <h1 className="text-black font-bold text-4xl mt-4 mb-4">Business Info</h1>
+      <h1 className="text-black font-bold text-4xl mt-4 mb-4">
+        {' '}
+        🔧 Business Info
+      </h1>
       <form className="flex flex-col " onSubmit={handleSubmit}>
-        <div className="flex  gap-20">
+        <div className="flex  gap-15">
           <div>
             <div className="flex flex-col mb-4">
               <label htmlFor="businessName" className="text-black mb-2">
