@@ -11,7 +11,7 @@ function FormPage() {
     businessType: '',
     usp: '',
   });
-  const [activeForm, setActiveForm] = useState(3);
+  const [activeForm, setActiveForm] = useState(4);
   return (
     <div
       className="bg-white h-screen relative hero "
@@ -31,6 +31,9 @@ function FormPage() {
             </li>
             <li className={activeForm >= 4 ? 'step step-primary' : 'step'}>
               Receive Product
+            </li>
+            <li className={activeForm >= 5 ? 'step step-primary' : 'step'}>
+              Summary
             </li>
           </ul>
           <Form1

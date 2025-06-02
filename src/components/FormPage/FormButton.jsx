@@ -10,7 +10,7 @@ function FormButton({ setActiveForm, activeForm }) {
       </button>
       <button
         type="submit"
-        className={activeForm === 4 ? 'btn btn-disabled  ' : 'btn btn-primary '}
+        className={activeForm === 5 ? 'btn btn-disabled  ' : 'btn btn-primary '}
       >
         next
       </button>
