@@ -2,6 +2,7 @@ import Form1 from '../components/FormPage/form1';
 import Form2 from '../components/FormPage/form2';
 import Form3 from '../components/FormPage/form3';
 import Form4 from '../components/FormPage/form4';
+import Summary from '../components/FormPage/Summary';
 import backgroundForm from '../assets/backgroundForm.jpg';
 import { useState } from 'react';
 function FormPage() {
@@ -11,7 +12,7 @@ function FormPage() {
     businessType: '',
     usp: '',
   });
-  const [activeForm, setActiveForm] = useState(4);
+  const [activeForm, setActiveForm] = useState(5);
   return (
     <div
       className="bg-white h-screen relative hero "
@@ -60,6 +61,13 @@ function FormPage() {
           />
           <Form4
             isActive={activeForm === 4}
+            formData={formData}
+            activeForm={activeForm}
+            setFormData={setFormData}
+            setActiveForm={setActiveForm}
+          />
+          <Summary
+            isActive={activeForm === 5}
             formData={formData}
             activeForm={activeForm}
             setFormData={setFormData}
