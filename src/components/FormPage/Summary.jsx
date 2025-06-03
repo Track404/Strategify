@@ -1,5 +1,5 @@
 import { useMarketingStrategy } from '../../utils/useMarketingStrategy';
-
+import { useEffect } from 'react';
 function Summary({ isActive, formData, setActiveForm, activeForm }) {
   const mutation = useMarketingStrategy();
   const { mutate, data, isLoading } = mutation;
@@ -7,6 +7,13 @@ function Summary({ isActive, formData, setActiveForm, activeForm }) {
   const handleGenerateAll = () => {
     mutate(formData);
   };
+
+  useEffect(() => {
+    if (data) {
+      localStorage.setItem('marketingStrategy', JSON.stringify(data));
+    }
+  }, [data]);
+
   if (!isActive) return null;
 
   const InfoItem = ({ label, value }) => {
