@@ -25,20 +25,51 @@ function FormPage() {
     >
       <div className="min-h-screen flex items-center justify-center py-8 px-4">
         <div className="card card-border bg-gray-100 w-full max-w-7xl">
-          <div className="card-body">
-            <ul className="steps text-black mb-8">
-              <li className="step step-primary">Business Information</li>
+          <div className="card-body ">
+            <ul className="steps text-black mb-8 w-full hidden sm:inline-grid ">
+              <li className="step step-primary">
+                <span>Business Info</span>
+              </li>
               <li className={activeForm >= 2 ? 'step step-primary' : 'step'}>
-                Choose plan
+                <span>Marketing Preferences</span>
               </li>
               <li className={activeForm >= 3 ? 'step step-primary' : 'step'}>
-                Purchase
+                <span>Goals</span>
               </li>
               <li className={activeForm >= 4 ? 'step step-primary' : 'step'}>
-                Receive Product
+                <span>Marketing Preferences</span>
               </li>
-              <li className={activeForm >= 5 ? 'step step-primary' : 'step'}>
-                Summary
+              <li
+                data-content="✓"
+                className={activeForm >= 5 ? 'step step-primary' : 'step'}
+              >
+                <span>Summary</span>
+              </li>
+            </ul>
+
+            <ul className="steps text-black mb-8 w-full sm:hidden">
+              <li className="step step-primary">
+                <span>🔧</span>
+              </li>
+              <li className={activeForm >= 2 ? 'step step-primary' : 'step'}>
+                <span>📊</span>
+              </li>
+              <li className={activeForm >= 3 ? 'step step-primary' : 'step'}>
+                <span>🎯</span>
+              </li>
+            </ul>
+            <ul className="steps text-black mb-8 w-full sm:hidden">
+              <li
+                data-content="4"
+                className={activeForm >= 4 ? 'step step-primary' : 'step'}
+              >
+                <span>📈</span>
+              </li>
+              <li
+                data-content="✓"
+                className={activeForm >= 5 ? 'step step-primary' : 'step'}
+              >
+                <span>📋</span>
               </li>
             </ul>
 

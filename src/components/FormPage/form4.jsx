@@ -13,7 +13,7 @@ function Form2({ isActive, formData, setFormData, setActiveForm, activeForm }) {
 
   return (
     <>
-      <h1 className=" font-bold text-4xl mt-4 mb-8 text-center">
+      <h1 className="text-primary font-bold text-4xl mt-4 mb-8 text-center">
         📣 Marketing Preferences
       </h1>
 

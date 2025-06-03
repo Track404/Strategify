@@ -28,7 +28,9 @@ function Summary({ isActive, formData, setActiveForm, activeForm }) {
 
   return (
     <>
-      <h1 className=" font-bold text-4xl mt-4 mb-8 text-center">📋 Summary</h1>
+      <h1 className="text-primary font-bold text-4xl mt-4 mb-8 text-center">
+        📋 Summary
+      </h1>
       <button onClick={handleGenerateAll} disabled={isLoading} className="btn">
         {isLoading ? (
           <span className="loading loading-spinner text-neutral"></span>
