@@ -17,7 +17,7 @@ function Form2({ isActive, formData, setFormData, setActiveForm, activeForm }) {
         📣 Marketing Preferences
       </h1>
 
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="w-full md:max-w-6xl md:mx-auto md:px-6">
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Marketing Channels Card */}
@@ -26,10 +26,16 @@ function Form2({ isActive, formData, setFormData, setActiveForm, activeForm }) {
                 <h2 className="card-title text-primary mb-4">
                   Marketing Channels
                 </h2>
-                <div className="form-control">
-                  <label htmlFor="marketingChannel" className="label">
-                    <span className="label-text font-medium">
-                      Which marketing channels have you tried/want to try?
+                <div className="form-control flex flex-col mb-4">
+                  <label
+                    htmlFor="marketingChannel"
+                    className="label mb-2 w-full "
+                  >
+                    <span className="label-text font-medium text-sm sm:text-base break-words">
+                      <span className="hidden sm:inline">
+                        Which marketing channels have you tried/want to try?
+                      </span>
+                      <span className="sm:hidden">Marketing channels?</span>
                     </span>
                   </label>
                   <select
@@ -71,25 +77,27 @@ function Form2({ isActive, formData, setFormData, setActiveForm, activeForm }) {
                 </h2>
 
                 {/* Toggle Section */}
-                <div className="form-control">
-                  <label className="label cursor-pointer justify-start gap-4">
+                <div className="form-control ">
+                  <label className="label cursor-pointer flex-col md:flex-row  items-start gap-4 mb-2">
                     <span className="label-text font-medium">
                       Do you have an existing audience?
                     </span>
-                    <input
-                      type="checkbox"
-                      className="toggle toggle-primary"
-                      checked={isChecked}
-                      onChange={(e) => setIsChecked(e.target.checked)}
-                      aria-label="Toggle existing audience"
-                    />
-                    <span
-                      className={`badge ${
-                        isChecked ? 'badge-success' : 'badge-error'
-                      }`}
-                    >
-                      {isChecked ? 'Yes' : 'No'}
-                    </span>
+                    <div className="flex  gap-2">
+                      <input
+                        type="checkbox"
+                        className="toggle toggle-primary"
+                        checked={isChecked}
+                        onChange={(e) => setIsChecked(e.target.checked)}
+                        aria-label="Toggle existing audience"
+                      />
+                      <span
+                        className={`badge ${
+                          isChecked ? 'badge-success' : 'badge-error'
+                        }`}
+                      >
+                        {isChecked ? 'Yes' : 'No'}
+                      </span>
+                    </div>
                   </label>
                 </div>
 
