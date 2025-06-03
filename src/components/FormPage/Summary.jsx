@@ -1,6 +1,12 @@
-import FormButton from './FormButton';
+import { useMarketingStrategy } from '../../utils/useMarketingStrategy';
 
 function Summary({ isActive, formData, setActiveForm, activeForm }) {
+  const mutation = useMarketingStrategy();
+  const { mutate, data, isLoading } = mutation;
+
+  const handleGenerateAll = () => {
+    mutate(formData);
+  };
   if (!isActive) return null;
 
   const InfoItem = ({ label, value }) => {
@@ -16,7 +22,25 @@ function Summary({ isActive, formData, setActiveForm, activeForm }) {
   return (
     <>
       <h1 className=" font-bold text-4xl mt-4 mb-8 text-center">📋 Summary</h1>
+      <button onClick={handleGenerateAll} disabled={isLoading} className="btn">
+        {isLoading ? (
+          <span className="loading loading-spinner text-neutral"></span>
+        ) : (
+          'Generate Full Strategy'
+        )}
+      </button>
 
+      {data && (
+        <div>
+          <h2>Executive Summary</h2>
+          <p>{data.executive}</p>
+
+          <h2>Target Audience</h2>
+          <p>{data.audience}</p>
+
+          {/* etc... */}
+        </div>
+      )}
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Business Info */}
